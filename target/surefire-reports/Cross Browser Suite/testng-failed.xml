@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Cross Browser Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.carbooking.taskApp.utils.TestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Chrome Tests(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.carbooking.gui.tests.positive.BookingPositiveTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="testCarBookingSuccess"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.positive.BookingPositiveTests -->
+      <class name="com.carbooking.gui.tests.positive.RegistrationPositiveTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testUserRegistration"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.positive.RegistrationPositiveTests -->
+      <class name="com.carbooking.gui.tests.negative.BookingNegativeTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testBookingInPastDates"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.negative.BookingNegativeTests -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="API Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.carbooking.taskApp.api.tests.CarApiTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testGetCars_CombinedFilters_ShouldWork"/>
+          <include name="testGetAllCars_ShouldReturn200"/>
+          <include name="testGetCars_NoCarsAvailable_ShouldReturn200WithEmptyList"/>
+          <include name="testGetCarTypes_ShouldReturn200"/>
+          <include name="testGetCars_WithDateFilter_ShouldShowCarsFreeOnDates"/>
+        </methods>
+      </class> <!-- com.carbooking.taskApp.api.tests.CarApiTest -->
+    </classes>
+  </test> <!-- API Tests(failed) -->
+  <test thread-count="2" parallel="tests" name="Firefox Tests(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.carbooking.gui.tests.positive.BookingPositiveTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testCarBookingSuccess"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.positive.BookingPositiveTests -->
+      <class name="com.carbooking.gui.tests.positive.RegistrationPositiveTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testUserRegistration"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.positive.RegistrationPositiveTests -->
+      <class name="com.carbooking.gui.tests.negative.BookingNegativeTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testBookingInPastDates"/>
+        </methods>
+      </class> <!-- com.carbooking.gui.tests.negative.BookingNegativeTests -->
+    </classes>
+  </test> <!-- Firefox Tests(failed) -->
+</suite> <!-- Failed suite [Cross Browser Suite] -->
