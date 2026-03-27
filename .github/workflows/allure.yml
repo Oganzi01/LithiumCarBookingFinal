@@ -27,7 +27,7 @@ jobs:
         continue-on-error: true
 
       - name: Generate Allure Report
-        run: mvn allure:report
+        run: mvn allure:install allure:report
         if: always()
 
       - name: Deploy to GitHub Pages
