@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-27T07:15:44 CET" name="Full Test Suite" finished-at="2026-03-27T07:16:04 CET" duration-ms="20089">
+    <groups>
+    </groups>
+    <test started-at="2026-03-27T07:15:44 CET" name="API Tests" finished-at="2026-03-27T07:15:44 CET" duration-ms="15">
+    </test> <!-- API Tests -->
+    <test started-at="2026-03-27T07:15:44 CET" name="UI Chrome Tests" finished-at="2026-03-27T07:15:49 CET" duration-ms="5676">
+      <class name="com.carbooking.gui.tests.FirstTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.FirstTest@17f62e33]" started-at="2026-03-27T07:15:44 CET" name="setUp" finished-at="2026-03-27T07:15:45 CET" duration-ms="1797" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.FirstTest.testOpenBrowser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOpenBrowser()[pri:0, instance:com.carbooking.gui.tests.FirstTest@17f62e33]" started-at="2026-03-27T07:15:45 CET" name="testOpenBrowser" finished-at="2026-03-27T07:15:45 CET" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenBrowser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.FirstTest@17f62e33]" started-at="2026-03-27T07:15:45 CET" name="tearDown" finished-at="2026-03-27T07:15:46 CET" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.carbooking.gui.tests.FirstTest -->
+      <class name="com.carbooking.gui.tests.SecurityTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:46 CET" name="setUp" finished-at="2026-03-27T07:15:47 CET" duration-ms="1143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.findIdorThreat()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="findIdorThreat()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:47 CET" name="findIdorThreat" description="Проверка на угрозу IDOR" finished-at="2026-03-27T07:15:47 CET" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findIdorThreat -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:47 CET" name="tearDown" finished-at="2026-03-27T07:15:47 CET" duration-ms="183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:47 CET" name="setUp" finished-at="2026-03-27T07:15:48 CET" duration-ms="1441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.testSqlInjectionInput()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSqlInjectionInput()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:48 CET" name="testSqlInjectionInput" description="Тест на SQL Injection в поле логина" finished-at="2026-03-27T07:15:49 CET" duration-ms="570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqlInjectionInput -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@48075da3]" started-at="2026-03-27T07:15:49 CET" name="tearDown" finished-at="2026-03-27T07:15:49 CET" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.carbooking.gui.tests.SecurityTests -->
+    </test> <!-- UI Chrome Tests -->
+    <test started-at="2026-03-27T07:15:44 CET" name="UI Firefox Tests" finished-at="2026-03-27T07:16:04 CET" duration-ms="20089">
+      <class name="com.carbooking.gui.tests.FirstTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.FirstTest@496bc455]" started-at="2026-03-27T07:15:44 CET" name="setUp" finished-at="2026-03-27T07:15:50 CET" duration-ms="6899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.FirstTest.testOpenBrowser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOpenBrowser()[pri:0, instance:com.carbooking.gui.tests.FirstTest@496bc455]" started-at="2026-03-27T07:15:50 CET" name="testOpenBrowser" finished-at="2026-03-27T07:15:50 CET" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenBrowser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.FirstTest@496bc455]" started-at="2026-03-27T07:15:50 CET" name="tearDown" finished-at="2026-03-27T07:15:51 CET" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.carbooking.gui.tests.FirstTest -->
+      <class name="com.carbooking.gui.tests.SecurityTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:15:51 CET" name="setUp" finished-at="2026-03-27T07:15:56 CET" duration-ms="4976" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.findIdorThreat()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="findIdorThreat()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:15:56 CET" name="findIdorThreat" description="Проверка на угрозу IDOR" finished-at="2026-03-27T07:15:56 CET" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findIdorThreat -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:15:56 CET" name="tearDown" finished-at="2026-03-27T07:15:57 CET" duration-ms="928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:15:57 CET" name="setUp" finished-at="2026-03-27T07:16:02 CET" duration-ms="4935" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.testSqlInjectionInput()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSqlInjectionInput()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:16:02 CET" name="testSqlInjectionInput" description="Тест на SQL Injection в поле логина" finished-at="2026-03-27T07:16:03 CET" duration-ms="456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSqlInjectionInput -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@59402b8f]" started-at="2026-03-27T07:16:03 CET" name="tearDown" finished-at="2026-03-27T07:16:04 CET" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.carbooking.gui.tests.SecurityTests -->
+    </test> <!-- UI Firefox Tests -->
+  </suite> <!-- Full Test Suite -->
+</testng-results>
