@@ -1,6 +1,6 @@
 package com.carbooking.gui.tests.all;
 
-import com.carbooking.gui.core.TestBase;
+import com.carbooking.gui.cor.TestBase;
 import com.carbooking.gui.pages.BookingPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
