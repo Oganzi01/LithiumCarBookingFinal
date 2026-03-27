@@ -8,7 +8,7 @@ public class LoginNegativeTests extends TestBase {
 
     @Test(priority = 1)
     public void loginWithInvalidPassword() throws InterruptedException {
-        app.driver.get("http://localhost:5173/login");
+        app.getDriver().get("http://localhost:5173/login");
         // Используем твой реальный email, но заведомо ложный пароль
         loginPage.login("tester1774119303709@gmail.com", "WrongPassword123!");
 
@@ -21,7 +21,7 @@ public class LoginNegativeTests extends TestBase {
 
     @Test(priority = 2)
     public void loginWithEmptyEmail() {
-        app.driver.get("http://localhost:5173/login");
+        app.getDriver().get("http://localhost:5173/login");
         loginPage.login("", "GanzQA2026!");
 
         Assert.assertFalse(homePage.isLogoutButtonPresent(),
@@ -30,7 +30,7 @@ public class LoginNegativeTests extends TestBase {
 
     @Test(priority = 3)
     public void loginWithInvalidEmailFormat() {
-        app.driver.get("http://localhost:5173/login");
+        app.getDriver().get("http://localhost:5173/login");
         loginPage.login("tester.at.gmail.com", "GanzQA2026!");
 
         Assert.assertFalse(homePage.isLogoutButtonPresent(),

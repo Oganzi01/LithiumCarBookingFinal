@@ -10,12 +10,12 @@ public class FullWorkflowTest extends TestBase {
     @Test(description = "Полный цикл: Логин -> Поиск -> Бронирование")
     public void testFullCarBookingWorkflow() throws InterruptedException {
         // 1. Авторизация
-        app.driver.get("http://localhost:5173/login");
+        app.getDriver().get("http://localhost:5173/login");
         loginPage.login("tester1774119303709@gmail.com", "GanzQA2026!");
 
         // 2. Переход к бронированию
-        app.driver.get("http://localhost:5173/");
-        BookingPage bPage = new BookingPage(app.driver);
+        app.getDriver().get("http://localhost:5173/");
+        BookingPage bPage = new BookingPage(app.getDriver());
 
         // 3. Поиск машин
         bPage.fillDatesAndSearch("28032026", "30032026");

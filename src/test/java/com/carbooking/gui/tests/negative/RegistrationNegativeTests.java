@@ -9,8 +9,8 @@ public class RegistrationNegativeTests extends TestBase {
 
     @Test
     public void testRegistrationWithExistingEmail() throws InterruptedException {
-        app.driver.get("http://localhost:5173/register");
-        RegistrationPage regPage = new RegistrationPage(app.driver);
+        app.getDriver().get("http://localhost:5173/register");
+        RegistrationPage regPage = new RegistrationPage(app.getDriver());
 
         String existingEmail = "tester1774119303709@gmail.com";
 

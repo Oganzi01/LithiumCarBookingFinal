@@ -11,15 +11,15 @@ public class BookingPositiveTests extends TestBase {
     @Test
     public void testCarBookingSuccess() {
         // Переходим на логин
-        app.driver.get("http://localhost:5173/login");
-        LoginPage loginPage = new LoginPage(app.driver);
+        app.getDriver().get("http://localhost:5173/login");
+        LoginPage loginPage = new LoginPage(app.getDriver());
 
         // ВАЖНО: Убедиться, что этот пользователь существует в базе!
         loginPage.login("tester1774119303709@gmail.com", "GanzQA2026!");
 
         // Переход на главную для бронирования
-        app.driver.get("http://localhost:5173/");
-        BookingPage bPage = new BookingPage(app.driver);
+        app.getDriver().get("http://localhost:5173/");
+        BookingPage bPage = new BookingPage(app.getDriver());
 
         // Заполнение данных
         bPage.fillDatesAndSearch("28032026", "30032026");

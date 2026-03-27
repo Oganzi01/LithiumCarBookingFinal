@@ -10,12 +10,12 @@ public class BookingNegativeTests extends TestBase {
     @Test(priority = 1)
     public void testBookingInPastDates() throws InterruptedException {
         // 1. Логин (нужен для доступа к бронированию)
-        app.driver.get("http://localhost:5173/login");
+        app.getDriver().get("http://localhost:5173/login");
         loginPage.login("tester1774119303709@gmail.com", "GanzQA2026!");
 
         // 2. Переход на главную
-        app.driver.get("http://localhost:5173/");
-        BookingPage bPage = new BookingPage(app.driver);
+        app.getDriver().get("http://localhost:5173/");
+        BookingPage bPage = new BookingPage(app.getDriver());
 
         // 3. Попытка поиска машин на прошедшие даты (например, 2020 год)
         bPage.fillDatesAndSearch("01012020", "05012020");
@@ -41,11 +41,11 @@ public class BookingNegativeTests extends TestBase {
         }
 
         // Пытаемся зайти на страницу со списком машин напрямую
-        app.driver.get("http://localhost:5173/cars");
+        app.getDriver().get("http://localhost:5173/cars");
 
         // Проверяем, что неавторизованный пользователь либо редиректнут, либо не видит кнопок бронирования
-        boolean isLoginPage = app.driver.getCurrentUrl().contains("login");
-        boolean canSeeBookButtons = app.driver.getPageSource().contains("Book now");
+        boolean isLoginPage = app.getDriver().getCurrentUrl().contains("login");
+        boolean canSeeBookButtons = app.getDriver().getPageSource().contains("Book now");
 
         Assert.assertTrue(isLoginPage || !canSeeBookButtons,
                 "ОШИБКА: Доступ к функционалу бронирования открыт без авторизации!");

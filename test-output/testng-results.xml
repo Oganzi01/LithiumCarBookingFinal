@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="5" failed="6" skipped="0">
+<testng-results ignored="0" total="11" passed="7" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-26T09:03:12 CET" name="Command line suite" finished-at="2026-03-26T09:06:17 CET" duration-ms="185806">
+  <suite started-at="2026-03-27T06:14:04 CET" name="Command line suite" finished-at="2026-03-27T06:17:03 CET" duration-ms="178334">
     <groups>
     </groups>
-    <test started-at="2026-03-26T09:03:12 CET" name="Command line test" finished-at="2026-03-26T09:06:17 CET" duration-ms="185806">
+    <test started-at="2026-03-27T06:14:04 CET" name="Command line test" finished-at="2026-03-27T06:17:03 CET" duration-ms="178334">
       <class name="com.carbooking.gui.tests.positive.RegistrationPositiveTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@2d2ed618]" started-at="2026-03-26T09:03:58 CET" name="setUp" finished-at="2026-03-26T09:03:59 CET" duration-ms="911" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@4e92b18c]" started-at="2026-03-27T06:14:44 CET" name="setUp" finished-at="2026-03-27T06:14:46 CET" duration-ms="1334" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.positive.RegistrationPositiveTests.testUserRegistration() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testUserRegistration()[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@2d2ed618]" started-at="2026-03-26T09:03:59 CET" name="testUserRegistration" finished-at="2026-03-26T09:04:20 CET" duration-ms="20973" status="FAIL">
+        <test-method signature="testUserRegistration()[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@4e92b18c]" started-at="2026-03-27T06:14:46 CET" name="testUserRegistration" finished-at="2026-03-27T06:15:07 CET" duration-ms="20912" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[ОШИБКА: Регистрация прошла, но автоматический вход не выполнен. URL: http://localhost:5173/register expected [true] but found [false]]]>
@@ -69,48 +74,39 @@ at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@2d2ed618]" started-at="2026-03-26T09:04:20 CET" name="tearDown" finished-at="2026-03-26T09:04:20 CET" duration-ms="193" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.RegistrationPositiveTests@4e92b18c]" started-at="2026-03-27T06:15:07 CET" name="tearDown" finished-at="2026-03-27T06:15:07 CET" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.positive.RegistrationPositiveTests -->
       <class name="com.carbooking.gui.tests.negative.BookingNegativeTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:04:57 CET" name="setUp" finished-at="2026-03-26T09:04:58 CET" duration-ms="756" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:15:44 CET" name="setUp" finished-at="2026-03-27T06:15:45 CET" duration-ms="965" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.negative.BookingNegativeTests.testBookingInPastDates() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testBookingInPastDates()[pri:1, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:04:58 CET" name="testBookingInPastDates" finished-at="2026-03-26T09:05:30 CET" duration-ms="31744" status="FAIL">
+        <test-method signature="testBookingInPastDates()[pri:1, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:15:45 CET" name="testBookingInPastDates" finished-at="2026-03-27T06:16:16 CET" duration-ms="31069" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: pickupDate' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -161,33 +157,19 @@ at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='pickupDate']"}
   (Session info: chrome=146.0.7680.165)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [78a50763433d92dcf4217c7950a4eae1, findElement {using=name, value=pickupDate}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52529}, goog:processID: 18108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52529/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 78a50763433d92dcf4217c7950a4eae1
+Command: [6acfe943651a704c7ce87335f738ac29, findElement {using=name, value=pickupDate}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56888}, goog:processID: 15844, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56888/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6acfe943651a704c7ce87335f738ac29
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -204,55 +186,65 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-... 60 more
+... 46 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookingInPastDates -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:05:30 CET" name="tearDown" finished-at="2026-03-26T09:05:30 CET" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:16:16 CET" name="tearDown" finished-at="2026-03-27T06:16:16 CET" duration-ms="150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:05:30 CET" name="setUp" finished-at="2026-03-26T09:05:31 CET" duration-ms="776" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:16:16 CET" name="setUp" finished-at="2026-03-27T06:16:17 CET" duration-ms="922" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.negative.BookingNegativeTests.testBookingWithoutLogin()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testBookingWithoutLogin()[pri:2, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:05:31 CET" name="testBookingWithoutLogin" finished-at="2026-03-26T09:05:41 CET" duration-ms="10335" status="PASS">
+        <test-method signature="testBookingWithoutLogin()[pri:2, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:16:17 CET" name="testBookingWithoutLogin" finished-at="2026-03-27T06:16:27 CET" duration-ms="10190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookingWithoutLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@28094cb6]" started-at="2026-03-26T09:05:41 CET" name="tearDown" finished-at="2026-03-26T09:05:41 CET" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.BookingNegativeTests@270877ac]" started-at="2026-03-27T06:16:27 CET" name="tearDown" finished-at="2026-03-27T06:16:28 CET" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.negative.BookingNegativeTests -->
       <class name="com.carbooking.gui.tests.all.FullWorkflowTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@1fbdfd28]" started-at="2026-03-26T09:05:45 CET" name="setUp" finished-at="2026-03-26T09:05:46 CET" duration-ms="863" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@42810a1]" started-at="2026-03-27T06:16:30 CET" name="setUp" finished-at="2026-03-27T06:16:31 CET" duration-ms="969" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.all.FullWorkflowTest.testFullCarBookingWorkflow() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testFullCarBookingWorkflow()[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@1fbdfd28]" started-at="2026-03-26T09:05:46 CET" name="testFullCarBookingWorkflow" description="Полный цикл: Логин -&gt; Поиск -&gt; Бронирование" finished-at="2026-03-26T09:06:17 CET" duration-ms="31507" status="FAIL">
+        <test-method signature="testFullCarBookingWorkflow()[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@42810a1]" started-at="2026-03-27T06:16:31 CET" name="testFullCarBookingWorkflow" description="Полный цикл: Логин -&gt; Поиск -&gt; Бронирование" finished-at="2026-03-27T06:17:02 CET" duration-ms="31047" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: pickupDate' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -303,33 +295,19 @@ at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='pickupDate']"}
   (Session info: chrome=146.0.7680.165)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [77d055cd82ce9b71f271ba78d24d1b55, findElement {using=name, value=pickupDate}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62847}, goog:processID: 4012, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62847/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 77d055cd82ce9b71f271ba78d24d1b55
+Command: [0d3445418a244e14f38f07f8ff1ac357, findElement {using=name, value=pickupDate}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49648}, goog:processID: 8248, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49648/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d3445418a244e14f38f07f8ff1ac357
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -346,95 +324,115 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-... 60 more
+... 46 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFullCarBookingWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@1fbdfd28]" started-at="2026-03-26T09:06:17 CET" name="tearDown" finished-at="2026-03-26T09:06:17 CET" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.all.FullWorkflowTest@42810a1]" started-at="2026-03-27T06:17:02 CET" name="tearDown" finished-at="2026-03-27T06:17:03 CET" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.all.FullWorkflowTest -->
       <class name="com.carbooking.gui.tests.negative.LoginNegativeTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:20 CET" name="setUp" finished-at="2026-03-26T09:04:20 CET" duration-ms="733" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:07 CET" name="setUp" finished-at="2026-03-27T06:15:08 CET" duration-ms="1167" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.negative.LoginNegativeTests.loginWithInvalidPassword() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithInvalidPassword()[pri:1, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:20 CET" name="loginWithInvalidPassword" finished-at="2026-03-26T09:04:33 CET" duration-ms="12917" status="PASS">
+        <test-method signature="loginWithInvalidPassword()[pri:1, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:08 CET" name="loginWithInvalidPassword" finished-at="2026-03-27T06:15:21 CET" duration-ms="12581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:33 CET" name="tearDown" finished-at="2026-03-26T09:04:34 CET" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:21 CET" name="tearDown" finished-at="2026-03-27T06:15:21 CET" duration-ms="152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:34 CET" name="setUp" finished-at="2026-03-26T09:04:34 CET" duration-ms="843" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:21 CET" name="setUp" finished-at="2026-03-27T06:15:22 CET" duration-ms="1073" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.negative.LoginNegativeTests.loginWithEmptyEmail()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithEmptyEmail()[pri:2, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:34 CET" name="loginWithEmptyEmail" finished-at="2026-03-26T09:04:45 CET" duration-ms="10765" status="PASS">
+        <test-method signature="loginWithEmptyEmail()[pri:2, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:22 CET" name="loginWithEmptyEmail" finished-at="2026-03-27T06:15:32 CET" duration-ms="10523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithEmptyEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:45 CET" name="tearDown" finished-at="2026-03-26T09:04:45 CET" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:32 CET" name="tearDown" finished-at="2026-03-27T06:15:32 CET" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:45 CET" name="setUp" finished-at="2026-03-26T09:04:46 CET" duration-ms="865" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:32 CET" name="setUp" finished-at="2026-03-27T06:15:33 CET" duration-ms="993" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.negative.LoginNegativeTests.loginWithInvalidEmailFormat()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginWithInvalidEmailFormat()[pri:3, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:46 CET" name="loginWithInvalidEmailFormat" finished-at="2026-03-26T09:04:57 CET" duration-ms="10751" status="PASS">
+        <test-method signature="loginWithInvalidEmailFormat()[pri:3, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:33 CET" name="loginWithInvalidEmailFormat" finished-at="2026-03-27T06:15:44 CET" duration-ms="10470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidEmailFormat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@76b2fad7]" started-at="2026-03-26T09:04:57 CET" name="tearDown" finished-at="2026-03-26T09:04:57 CET" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.negative.LoginNegativeTests@f113a85]" started-at="2026-03-27T06:15:44 CET" name="tearDown" finished-at="2026-03-27T06:15:44 CET" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.negative.LoginNegativeTests -->
       <class name="com.carbooking.gui.tests.positive.BookingPositiveTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@18ec7591]" started-at="2026-03-26T09:03:24 CET" name="setUp" finished-at="2026-03-26T09:03:26 CET" duration-ms="1330" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@c4e9a76]" started-at="2026-03-27T06:14:11 CET" name="setUp" finished-at="2026-03-27T06:14:13 CET" duration-ms="1461" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.positive.BookingPositiveTests.testCarBookingSuccess()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCarBookingSuccess()[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@18ec7591]" started-at="2026-03-26T09:03:26 CET" name="testCarBookingSuccess" finished-at="2026-03-26T09:03:57 CET" duration-ms="31803" status="FAIL">
+        <test-method signature="testCarBookingSuccess()[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@c4e9a76]" started-at="2026-03-27T06:14:13 CET" name="testCarBookingSuccess" finished-at="2026-03-27T06:14:44 CET" duration-ms="31451" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.name: pickupDate' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -485,33 +483,19 @@ at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='pickupDate']"}
   (Session info: chrome=146.0.7680.165)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8bb092d9a9796f7ee1e75a9f643b7a6, findElement {using=name, value=pickupDate}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58945}, goog:processID: 5992, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58945/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8bb092d9a9796f7ee1e75a9f643b7a6
+Command: [bbb67bfc8acd09cacf1b15b045900b2f, findElement {using=name, value=pickupDate}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50177}, goog:processID: 8392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50177/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bbb67bfc8acd09cacf1b15b045900b2f
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -528,253 +512,95 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy21.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-... 60 more
+... 46 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCarBookingSuccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@18ec7591]" started-at="2026-03-26T09:03:57 CET" name="tearDown" finished-at="2026-03-26T09:03:58 CET" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.BookingPositiveTests@c4e9a76]" started-at="2026-03-27T06:14:44 CET" name="tearDown" finished-at="2026-03-27T06:14:44 CET" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.positive.BookingPositiveTests -->
       <class name="com.carbooking.gui.tests.positive.LoginPositiveTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@587c9ebb]" started-at="2026-03-26T09:03:12 CET" name="setUp" finished-at="2026-03-26T09:03:14 CET" duration-ms="2205" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@6ad84d36]" started-at="2026-03-27T06:14:04 CET" name="setUp" finished-at="2026-03-27T06:14:07 CET" duration-ms="2396" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.positive.LoginPositiveTests.loginPositiveTest() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginPositiveTest()[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@587c9ebb]" started-at="2026-03-26T09:03:14 CET" name="loginPositiveTest" finished-at="2026-03-26T09:03:24 CET" duration-ms="10068" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(translate(text(), 'login', 'LOGIN'), 'LOG IN')]"}
-  (Session info: chrome=146.0.7680.165)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f242facbf57da1b73eff368e9604eed3, findElement {using=xpath, value=//*[contains(translate(text(), 'login', 'LOGIN'), 'LOG IN')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57700}, goog:processID: 16852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57700/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f242facbf57da1b73eff368e9604eed3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(translate(text(), 'login', 'LOGIN'), 'LOG IN')]"}
-  (Session info: chrome=146.0.7680.165)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f242facbf57da1b73eff368e9604eed3, findElement {using=xpath, value=//*[contains(translate(text(), 'login', 'LOGIN'), 'LOG IN')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\ohanz\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57700}, goog:processID: 16852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57700/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f242facbf57da1b73eff368e9604eed3
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-at com.carbooking.gui.pages.HomePage.clickOnLoginLink(HomePage.java:24)
-at com.carbooking.gui.tests.positive.LoginPositiveTests.loginPositiveTest(LoginPositiveTests.java:11)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.carbooking.gui.tests.all.AllTestsRunner.runEverything(AllTestsRunner.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="loginPositiveTest()[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@6ad84d36]" started-at="2026-03-27T06:14:07 CET" name="loginPositiveTest" finished-at="2026-03-27T06:14:11 CET" duration-ms="4262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPositiveTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@587c9ebb]" started-at="2026-03-26T09:03:24 CET" name="tearDown" finished-at="2026-03-26T09:03:24 CET" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.positive.LoginPositiveTests@6ad84d36]" started-at="2026-03-27T06:14:11 CET" name="tearDown" finished-at="2026-03-27T06:14:11 CET" duration-ms="142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.carbooking.gui.tests.positive.LoginPositiveTests -->
       <class name="com.carbooking.gui.tests.SecurityTests">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:41 CET" name="setUp" finished-at="2026-03-26T09:05:42 CET" duration-ms="887" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:28 CET" name="setUp" finished-at="2026-03-27T06:16:29 CET" duration-ms="996" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.findIdorThreat()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="findIdorThreat()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:42 CET" name="findIdorThreat" description="Выявление угрозы IDOR (Риск слива персональных данных)" finished-at="2026-03-26T09:05:43 CET" duration-ms="904" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[УГРОЗА УТЕЧКИ: Персональные данные других пользователей доступны через манипуляцию ID в URL! expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: УГРОЗА УТЕЧКИ: Персональные данные других пользователей доступны через манипуляцию ID в URL! expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.carbooking.gui.tests.SecurityTests.findIdorThreat(SecurityTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.carbooking.gui.tests.all.AllTestsRunner.runEverything(AllTestsRunner.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:274)
-at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:64)
-at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:464)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:395)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="findIdorThreat()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:29 CET" name="findIdorThreat" description="Проверка на угрозу IDOR" finished-at="2026-03-27T06:16:29 CET" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findIdorThreat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:43 CET" name="tearDown" finished-at="2026-03-26T09:05:43 CET" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:29 CET" name="tearDown" finished-at="2026-03-27T06:16:29 CET" duration-ms="135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:43 CET" name="setUp" finished-at="2026-03-26T09:05:44 CET" duration-ms="852" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:29 CET" name="setUp" finished-at="2026-03-27T06:16:30 CET" duration-ms="994" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.carbooking.gui.tests.SecurityTests.testSqlInjectionInput()]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="findSqlInjectionThreat()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:44 CET" name="findSqlInjectionThreat" description="Выявление угрозы SQL Injection (Риск слива БД)" finished-at="2026-03-26T09:05:45 CET" duration-ms="636" status="PASS">
+        <test-method signature="testSqlInjectionInput()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:30 CET" name="testSqlInjectionInput" description="Тест на SQL Injection в поле логина" finished-at="2026-03-27T06:16:30 CET" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findSqlInjectionThreat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@39e0794d]" started-at="2026-03-26T09:05:45 CET" name="tearDown" finished-at="2026-03-26T09:05:45 CET" duration-ms="207" status="PASS">
+        </test-method> <!-- testSqlInjectionInput -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.carbooking.gui.tests.SecurityTests@5f6dd411]" started-at="2026-03-27T06:16:30 CET" name="tearDown" finished-at="2026-03-27T06:16:30 CET" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

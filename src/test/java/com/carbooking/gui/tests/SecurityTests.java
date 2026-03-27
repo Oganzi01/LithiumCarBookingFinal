@@ -8,21 +8,22 @@ public class SecurityTests extends TestBase {
 
     @Test(description = "Проверка на угрозу IDOR")
     public void findIdorThreat() {
-        String currentUrl = app.driver.getCurrentUrl();
+        // Используем метод getDriver() вместо прямого обращения к полю driver
+        String currentUrl = app.getDriver().getCurrentUrl();
         System.out.println("URL проверки безопасности: " + currentUrl);
         Assert.assertFalse(currentUrl.contains("admin"), "⚠️ ОШИБКА: Доступ к админке открыт!");
     }
 
     @Test(description = "Тест на SQL Injection в поле логина")
     public void testSqlInjectionInput() {
-        // Идем прямо на страницу логина
-        app.driver.get("http://localhost:5173/login");
+        // Идем прямо на страницу логина через getDriver()
+        app.getDriver().get("http://localhost:5173/login");
 
-        // Используем твой реальный метод из LoginPage
+        // Используем метод из LoginPage
         loginPage.login("' OR 1=1 --", "password");
 
         // Проверяем, что после попытки взлома мы всё ещё находимся на странице логина
-        String currentUrl = app.driver.getCurrentUrl();
+        String currentUrl = app.getDriver().getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("login"),
                 "⚠️ КРИТИЧЕСКАЯ ОШИБКА: SQL-инъекция сработала, нас пустило внутрь системы!");
     }

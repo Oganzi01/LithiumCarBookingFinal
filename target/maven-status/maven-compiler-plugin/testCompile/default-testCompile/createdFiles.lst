@@ -8,9 +8,9 @@ com\carbooking\taskApp\utils\AllureAttachments.class
 com\carbooking\gui\tests\positive\RegistrationPositiveTests.class
 com\carbooking\gui\tests\all\FullWorkflowTest.class
 com\carbooking\gui\tests\FirstTest.class
+com\carbooking\gui\utils\TestListener.class
 com\carbooking\gui\core\TestBase.class
 com\carbooking\gui\tests\negative\LoginNegativeTests.class
 com\carbooking\gui\tests\negative\RegistrationNegativeTests.class
 com\carbooking\taskApp\api\config\BaseApiTest.class
-com\carbooking\taskApp\utils\TestListener.class
 com\carbooking\taskApp\api\tests\CarApiTest.class
