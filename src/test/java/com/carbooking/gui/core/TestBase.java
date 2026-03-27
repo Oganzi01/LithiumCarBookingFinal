@@ -1,60 +1,39 @@
 package com.carbooking.gui.core;
 
 import com.carbooking.gui.fw.ApplicationManager;
-import com.carbooking.gui.pages.LoginPage;
 import com.carbooking.gui.pages.HomePage;
-import io.qameta.allure.Allure;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.*;
+import com.carbooking.gui.pages.LoginPage;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
-import java.io.ByteArrayInputStream;
+import java.lang.reflect.Method;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected static ApplicationManager app;
     protected LoginPage loginPage;
     protected HomePage homePage;
 
-    // Вернули этот метод, чтобы старый TestListener не выдавал ошибку компиляции!
-    public WebDriver getDriver() {
-        return app.driver;
-    }
-
     @BeforeMethod
-    @Parameters("browser")
-    public void setUp(@Optional("chrome") String browser) {
-        app.init(browser);
+    @Parameters({"browser"})
+    public void setUp(@Optional("chrome") String browser, Method method) {
+        // Инициализируем менеджер
+        app = new ApplicationManager(browser);
+        app.init();
 
-        loginPage = new LoginPage(app.driver);
-        homePage = new HomePage(app.driver);
+        // Передаем драйвер в страницы через метод getDriver()
+        loginPage = new LoginPage(app.getDriver());
+        homePage = new HomePage(app.getDriver());
+
+        System.out.println("Starting test: " + method.getName() + " on browser: " + browser);
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(ITestResult result) {
-        // Если тест УПАЛ — делаем скриншот СВОИМИ РУКАМИ прямо здесь!
-        if (!result.isSuccess()) {
-            System.out.println("⚠️ ТЕСТ УПАЛ: " + result.getName() + " -> Начинаем захват экрана...");
-            if (app.driver != null) {
-                try {
-                    // Фотографируем экран
-                    byte[] screenshot = ((TakesScreenshot) app.driver).getScreenshotAs(OutputType.BYTES);
-                    // Напрямую кладем файл в Allure
-                    Allure.addAttachment("Скриншот при ошибке", "image/png", new ByteArrayInputStream(screenshot), ".png");
-                    System.out.println("📸 СКРИНШОТ УСПЕШНО ДОБАВЛЕН В ОТЧЕТ!");
-                } catch (Exception e) {
-                    System.out.println("❌ ОШИБКА КАМЕРЫ: " + e.getMessage());
-                }
-            } else {
-                System.out.println("❌ Драйвер мертв (null), скриншот сделать невозможно.");
-            }
-        }
-
-        // Только после попытки сделать фото закрываем браузер
+    public void tearDown() {
         if (app != null) {
-            app.stop();
+            app.quit();
         }
     }
 }

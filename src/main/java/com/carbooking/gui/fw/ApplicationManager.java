@@ -1,39 +1,63 @@
 package com.carbooking.gui.fw;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.Browser;
 
 import java.time.Duration;
 
 public class ApplicationManager {
-    // Вернули как было! Все твои 25 тестов будут довольны.
-    public WebDriver driver;
+    private WebDriver driver;
+    private String browser;
 
-    public void init(String browser) {
-        if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        } else if (browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        } else {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
+
+    public void init() {
+        boolean headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
+
+        if (browser.equalsIgnoreCase(Browser.CHROME.browserName())) {
+            ChromeOptions options = new ChromeOptions();
+            if (headless) {
+                options.addArguments("--headless=new");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--window-size=1920,1080");
+            }
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase(Browser.FIREFOX.browserName())) {
+            FirefoxOptions options = new FirefoxOptions();
+            if (headless) {
+                options.addArguments("-headless");
+            }
+            driver = new FirefoxDriver(options);
+        } else if (browser.equalsIgnoreCase(Browser.EDGE.browserName())) {
+            EdgeOptions options = new EdgeOptions();
+            if (headless) {
+                options.addArguments("--headless");
+            }
+            driver = new EdgeDriver(options);
         }
 
         if (driver != null) {
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.get("http://localhost:5173/");
         }
     }
 
-    public void stop() {
+    public void quit() {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
