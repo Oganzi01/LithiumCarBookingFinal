@@ -15,25 +15,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v3
-        with:
-          java-version: '21'
-          distribution: 'temurin'
 
-      - name: Run Tests
-        # Билд будет зеленым (continue-on-error), даже если тесты упадут
-        run: mvn clean test "-DsuiteXmlFile=testng-crossbrowser.xml"
-        continue-on-error: true
 
       - name: Allure Report action
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
-          # Используем папку из корня, как на твоем скрине fcef07.jpg
+
           allure_results: allure-results
           allure_history: allure-history
-          keep_reports: 20
+          keep_reports: 1
 
       - name: Deploy report to Github Pages
         if: always()
@@ -42,5 +33,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          # СИЛА: Создает ветку, если ее нет, и убирает твою ошибку
           force_orphan: true
