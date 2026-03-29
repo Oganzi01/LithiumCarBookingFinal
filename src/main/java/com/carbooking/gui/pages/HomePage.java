@@ -1,14 +1,15 @@
 package com.carbooking.gui.pages;
 
-import com.carbooking.gui.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//h1")
@@ -25,8 +26,7 @@ public class HomePage extends BasePage {
     }
 
     public boolean isHomePageOpened() {
-        // Проверяем URL или наличие главного заголовка
-        return driver.getCurrentUrl().contains("localhost") || mainHeader.isDisplayed();
+        return mainHeader.isDisplayed();
     }
 
     public boolean isLogoutButtonPresent() {
@@ -38,5 +38,10 @@ public class HomePage extends BasePage {
     }
 
     public void clickLogout() {
+        logoutButton.click();
+    }
+
+    public boolean isLoaded() {
+        return mainHeader.isDisplayed();
     }
 }

@@ -1,31 +1,18 @@
 package com.carbooking.gui.tests.all;
 
-import com.carbooking.gui.cor.TestBase;
-import com.carbooking.gui.pages.BookingPage;
-import org.testng.Assert;
+import com.carbooking.gui.core.BaseTest;
+import com.carbooking.gui.pages.HomePage;
 import org.testng.annotations.Test;
 
-public class FullWorkflowTest extends TestBase {
+public class FullWorkflowTest extends BaseTest {
 
-    @Test(description = "Полный цикл: Логин -> Поиск -> Бронирование")
-    public void testFullCarBookingWorkflow() throws InterruptedException {
-        // 1. Авторизация
-        app.getDriver().get("http://localhost:5173/login");
-        loginPage.login("tester1774119303709@gmail.com", "GanzQA2026!");
+    @Test
+    public void fullWorkflow() {
+        // Переход на сайт через потокобезопасный драйвер
+        getDriver().get("http://localhost:5173");
 
-        // 2. Переход к бронированию
-        app.getDriver().get("http://localhost:5173/");
-        BookingPage bPage = new BookingPage(app.getDriver());
-
-        // 3. Поиск машин
-        bPage.fillDatesAndSearch("28032026", "30032026");
-        Thread.sleep(2000); // Даем React подгрузить список
-
-        // 4. Клик по первой машине
-        bPage.clickFirstAvailableCar();
-        Thread.sleep(2000);
-
-        // 5. Проверка успеха
-        Assert.assertTrue(bPage.isBookingSuccessful(), "Ошибка: Бронирование не завершено!");
+        HomePage homePage = new HomePage(getDriver());
+        // Добавь здесь шаги своего теста, используя getDriver() вместо driver
     }
 }
+

@@ -1,44 +1,48 @@
 package com.carbooking.gui.pages;
 
-import com.carbooking.gui.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
+import org.openqa.selenium.support.PageFactory;
 
 public class RegistrationPage extends BasePage {
+
     public RegistrationPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this);
     }
 
-    // Ищем просто все input по порядку
-    @FindBy(xpath = "(//input)[1]")
-    private WebElement fullNameInput;
+    @FindBy(id = "first-name")
+    private WebElement firstNameInput;
 
-    @FindBy(xpath = "(//input)[2]")
+    @FindBy(id = "last-name")
+    private WebElement lastNameInput;
+
+    @FindBy(id = "email")
     private WebElement emailInput;
 
-    @FindBy(xpath = "(//input)[3]")
-    private WebElement phoneInput;
-
-    @FindBy(xpath = "(//input)[4]")
+    @FindBy(id = "password")
     private WebElement passwordInput;
 
-    @FindBy(xpath = "//button[@type='submit'] | //button[contains(text(),'Sign')]")
-    private WebElement signUpButton;
+    @FindBy(id = "register-btn")
+    private WebElement registerButton;
 
-    public void register(String name, String email, String phone, String pass) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    @FindBy(id = "registration-success")
+    private WebElement successMessage;
 
-        // Ждем, пока хотя бы один input станет доступен
-        wait.until(ExpectedConditions.elementToBeClickable(fullNameInput));
-
-        fullNameInput.sendKeys(name);
+    public void register(String first, String last, String email, String password) {
+        firstNameInput.sendKeys(first);
+        lastNameInput.sendKeys(last);
         emailInput.sendKeys(email);
-        phoneInput.sendKeys(phone);
-        passwordInput.sendKeys(pass);
-        signUpButton.click();
+        passwordInput.sendKeys(password);
+        registerButton.click();
+    }
+
+    public boolean isRegistrationSuccessful() {
+        try {
+            return successMessage.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

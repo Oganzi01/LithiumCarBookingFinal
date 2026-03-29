@@ -11,12 +11,17 @@ import org.testng.annotations.Parameters;
 import java.time.Duration;
 
 public class BaseTest {
-    // Эта переменная должна быть именно такой, чтобы тесты не горели красным
-    protected WebDriver driver;
+    // Поток для драйвера (чтобы тесты не путались)
+    private static final ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
+
+    public static WebDriver getDriver() {
+        return driverThread.get();
+    }
 
     @Parameters("browser")
     @BeforeMethod
     public void setUp(@Optional("chrome") String browser) {
+        WebDriver driver;
         if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -25,15 +30,16 @@ public class BaseTest {
             driver = new ChromeDriver();
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driverThread.set(driver);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
+        if (getDriver() != null) {
+            getDriver().quit();
+            driverThread.remove();
         }
     }
 }
