@@ -15,21 +15,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
           cache: maven
 
       - name: Run Tests
-        # Запускаем именно наш кроссбраузерный набор тестов
+        # Теперь билд упадет (будет красный), если хоть один тест не прошел
         run: mvn clean test "-DsuiteXmlFile=testng-crossbrowser.xml"
-        continue-on-error: true
 
       - name: Get Allure history
         uses: actions/checkout@v3
-        if: always()
+        if: always() # Это важно: выполняем, даже если тесты упали
         continue-on-error: true
         with:
           ref: gh-pages
@@ -37,15 +36,14 @@ jobs:
 
       - name: Allure Report action from GH
         uses: simple-elf/allure-report-action@master
-        if: always()
+        if: always() # Собираем отчет в любом случае
         with:
-          # Исправленный путь к результатам Maven
           allure_results: target/allure-results
           allure_history: allure-history
           keep_reports: 20
 
       - name: Deploy report to Github Pages
-        if: always()
+        if: always() # Публикуем ссылку в любом случае
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
