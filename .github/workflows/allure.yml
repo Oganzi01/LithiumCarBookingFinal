@@ -15,14 +15,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 1. Устанавливаем Java (нужна для запуска тестов)
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'microsoft' # или 'temurin'
 
 
+      - name: Run Tests
+        run: mvn clean test
+        continue-on-error: true # Чтобы отчет создался, даже если какой-то тест упадет
+
+      # 3. Генерируем отчет из созданных результатов
       - name: Allure Report action
         uses: simple-elf/allure-report-action@master
         with:
-          allure_results: allure-results
+          # Maven по умолчанию кладет результаты в target/allure-results
+          allure_results: target/allure-results
           allure_history: allure-history
 
+      # 4. Публикуем отчет
       - name: Deploy report to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
