@@ -21,21 +21,22 @@ jobs:
           java-version: '21'
           distribution: 'microsoft'
 
-      - name: Run Tests
+      # Запускаем все тесты проекта (UI и API)
+      - name: Run All Tests
         run: mvn clean test
         continue-on-error: true
 
-      # ДОБАВИЛИ ЭТОТ ШАГ: Копируем результаты в корень, чтобы экшен их точно увидел
       - name: Copy Results to root
         run: |
           mkdir -p allure-results
-          cp -R target/allure-results/. allure-results/ || echo "No results found in target"
+          cp -R target/allure-results/. allure-results/ || echo "No results found"
 
       - name: Allure Report action
         uses: simple-elf/allure-report-action@master
         with:
           allure_results: allure-results
           allure_history: allure-history
+          keep_reports: 5 # Храним только последние 5 запусков для динамики, остальное чистим
 
       - name: Deploy report to Github Pages
         uses: peaceiris/actions-gh-pages@v3
