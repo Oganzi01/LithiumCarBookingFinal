@@ -15,18 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Clean old Allure results
-        run: rm -rf allure-results allure-history
-
-      - name: Copy Results from repo
-        run: |
-          mkdir -p allure-results
-          if [ -d "allure-results" ]; then
-            cp -R allure-results/. allure-results/
-          else
-            echo "Results not found"
-          fi
-
       - name: Allure Report action
         uses: simple-elf/allure-report-action@master
         with:
